@@ -14,12 +14,12 @@ export const SignUp = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    role: "User", // must match UserRole enum
+    role: "User", 
     profilePicture: null,
     phoneNumber: "",
     nationality: "",
     dateOfBirth: "",
-    gender: "Male" // must match Gender enum
+    gender: "Male" 
   });
 
   // Fetch nationalities (with axios)
@@ -70,7 +70,7 @@ export const SignUp = () => {
     }
     data.append("PhoneNumber", formData.phoneNumber);
     data.append("Nationality", formData.nationality);
-    data.append("DateOfBirth", new Date(formData.dateOfBirth).toISOString()); // format: yyyy-MM-dd
+    data.append("DateOfBirth", new Date(formData.dateOfBirth).toISOString()); 
     data.append("Gender", formData.gender);
 
     try {

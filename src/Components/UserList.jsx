@@ -23,9 +23,9 @@ export const UserList = () => {
   try {
     const response = await api.get("/User/retrieve_users");
 
-    const apiResponse = response.data; // full object
+    const apiResponse = response.data; 
     if (apiResponse.success) {
-      setUsers(apiResponse.data); // <-- this is the array
+      setUsers(apiResponse.data); 
     } else {
       setUsers([]);
       setError(apiResponse.message || "Failed to fetch users");

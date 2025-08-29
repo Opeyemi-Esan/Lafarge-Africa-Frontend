@@ -6,7 +6,7 @@ import axios from "axios";
 
 export const UpdateUser = () => {
   const navigate = useNavigate();
-  const { userId } = useParams(); // get userId from route
+  const { userId } = useParams(); 
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -45,7 +45,7 @@ export const UpdateUser = () => {
   // Preload user data
   useEffect(() => {
     const fetchUser = async () => {
-      if (!userId) return; // safety check
+      if (!userId) return; 
 
       try {
         const res = await api.get(`/User/${userId}`);
